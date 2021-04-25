@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <title>Dropdown</title>
+  </head>
+  <body>
+    <form action="https://formspree.io/f/xoqyvogk" method="POST">
+      <fieldset>
+        <!-- legend is label for groups -->
+        <legend>Courses selection</legend>
+        <label for="courses">Courses</label>
+        <select name="course" id="courses" autofocus>
+          <!-- dropdown -->
+          <!-- leave the first option empty makes selecting any optional -->
+          <option></option>
+          <optgroup label="Front end dev">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>Javascript</option>
+          </optgroup>
+          <optgroup label="Back end dev">
+            <option>Node</option>
+            <option>ASP.NET</option>
+            <option>Django</option>
+          </optgroup>
+        </select>
+
+        <!-- sliders/range -->
+        <label for="dificulty">Dificulty</label>
+        <input
+          name="dificulty"
+          type="range"
+          id="dificulty"
+          min="20"
+          max="100"
+          value="50"
+        />
+
+        <!-- radio buttons -->
+        <div>
+          <input
+            name="Membership"
+            type="radio"
+            name="Membership"
+            id="silver"
+            checked
+          />
+          <label class="label-inline" for="silver">Silver</label>
+        </div>
+        <div>
+          <input name="Membership" type="radio" name="Membership" id="gold" />
+          <label class="label-inline" for="gold">Gold</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal</legend>
+        <!-- date input field -->
+        <label for="Birthday">Birthday</label>
+        <input name="Birthday" type="Date" id="Birthday" />
+
+        <!-- checkboxes -->
+        <!-- label-inline miligram class -->
+        <div>
+          <input name="Gender" type="checkbox" id="male" />
+          <label class="label-inline" for="male">Male</label>
+        </div>
+        <div>
+          <input name="Gender" type="checkbox" id="female" />
+          <label class="label-inline" for="female">Female</label>
+        </div>
+
+        <!-- color -->
+        <label for="color">Select color</label>
+        <input name="Color" type="color" id="color" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Documents</legend>
+        <!-- file  -->
+        <!-- accept="audio/* video/* image/*" -->
+        <label for="photo">Photo</label>
+        <input name="Photo" type="file" id="photo" accept=".jpg, .png, .jpeg" />
+
+        <label for="testymon">Testymony</label>
+        <input
+          name="Testymony"
+          type="file"
+          id="testymon"
+          accept="audio/*"
+          multiple
+        />
+      </fieldset>
+
+      <filedset>
+        <legend>Login</legend>
+        <!-- email field with suggestions -->
+        <!-- required attributes cant be skipped -->
+        <label for="email">Email</label>
+        <input
+          name="Email"
+          type="email"
+          id="email"
+          list="email-type"
+          required
+        />
+        <datalist id="email-type">
+          <option>@gmail.com</option>
+          <option>@yahoo.com</option>
+          <option>@redmail.com</option>
+        </datalist>
+
+        <label for="passwrd">Password</label>
+        <input name="Password" type="password" required minlength="8" />
+      </filedset>
+
+      <input type="hidden" name="Prelogin Form" />
+
+      <button type="submit">Submit</button>
+      <button type="reset" class="button-outline">Reset</button>
+    </form>
+  </body>
+</html>
