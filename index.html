@@ -16,7 +16,7 @@
         <!-- legend is label for groups -->
         <legend>Courses selection</legend>
         <label for="courses">Courses</label>
-        <select name="course" id="courses" autofocus>
+        <select name="Course" id="courses" autofocus>
           <!-- dropdown -->
           <!-- leave the first option empty makes selecting any optional -->
           <option></option>
@@ -35,7 +35,7 @@
         <!-- sliders/range -->
         <label for="dificulty">Dificulty</label>
         <input
-          name="dificulty"
+          name="Dificulty"
           type="range"
           id="dificulty"
           min="20"
@@ -45,17 +45,11 @@
 
         <!-- radio buttons -->
         <div>
-          <input
-            name="Membership"
-            type="radio"
-            name="Membership"
-            id="silver"
-            checked
-          />
+          <input type="radio" name="Membership" id="silver" checked />
           <label class="label-inline" for="silver">Silver</label>
         </div>
         <div>
-          <input name="Membership" type="radio" name="Membership" id="gold" />
+          <input type="radio" name="Membership" id="gold" />
           <label class="label-inline" for="gold">Gold</label>
         </div>
       </fieldset>
@@ -63,8 +57,8 @@
       <fieldset>
         <legend>Personal</legend>
         <!-- date input field -->
-        <label for="Birthday">Birthday</label>
-        <input name="Birthday" type="Date" id="Birthday" />
+        <label for="birthday">Birthday</label>
+        <input name="Birthday" type="Date" id="birthday" />
 
         <!-- checkboxes -->
         <!-- label-inline miligram class -->
@@ -118,7 +112,13 @@
         </datalist>
 
         <label for="passwrd">Password</label>
-        <input name="Password" type="password" required minlength="8" />
+        <input
+          name="Password"
+          id="passwrd"
+          type="password"
+          required
+          minlength="8"
+        />
       </filedset>
 
       <input type="hidden" name="Prelogin Form" />
